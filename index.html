@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Search & View System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <h1>Employee Management System</h1>
+        <p>Search, Filter & View Employee Details</p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Search and View Panels -->
+        <section class="controls-section">
+          <!-- Search Panel -->
+          <div class="search-panel">
+            <div class="panel-title">🔍 Search Employees</div>
+            <form id="searchForm" class="search-form">
+              <div class="search-grid">
+                <div class="form-group">
+                  <label for="employeeId">Employee ID</label>
+                  <input
+                    type="text"
+                    id="employeeId"
+                    name="employeeId"
+                    placeholder="e.g. E1001"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="e.g. John Doe"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 9876543210"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="dept">Department</label>
+                  <input
+                    type="text"
+                    id="dept"
+                    name="dept"
+                    placeholder="e.g. Engineering"
+                  />
+                </div>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn btn-primary" id="searchBtn">
+                  Search
+                </button>
+                <button type="button" class="btn btn-secondary" id="resetBtn">
+                  Reset
+                </button>
+                <button type="button" class="btn btn-danger" id="clearBtn">
+                  Clear View
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- View Panel -->
+          <div class="view-panel">
+            <div class="panel-title">👤 Employee Details</div>
+            <div id="employeeView">
+              <div class="no-selection">
+                Select an employee from the table below
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Table Section -->
+        <section class="table-section">
+          <div class="table-header">📊 Employee List</div>
+          <table id="employeeTable">
+            <thead>
+              <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              <tr>
+                <td colspan="4" class="loading">Loading employees...</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="stats" id="stats">Initializing...</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

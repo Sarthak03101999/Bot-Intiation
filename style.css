@@ -1,0 +1,285 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* ===== HEADER SECTION ===== */
+.header {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+}
+
+.header p {
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding: 25px;
+}
+
+/* ===== FLEXBOX CONTROLS SECTION ===== */
+.controls-section {
+  display: flex; /* W3Schools Flexbox - Main container */
+  gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-bottom: 25px;
+}
+
+/* ===== SEARCH & VIEW PANELS ===== */
+.search-panel,
+.view-panel {
+  flex: 1; /* W3Schools Flexbox - Equal width distribution */
+  min-width: 300px; /* Responsive minimum width */
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #e9ecef;
+}
+
+.view-panel {
+  background: #f1f8ff;
+  border-color: #cce7ff;
+}
+
+.panel-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #495057;
+}
+
+/* ===== SEARCH FORM WITH FLEXBOX ===== */
+.search-grid {
+  display: flex; /* W3Schools Flexbox - Form layout */
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1 1 200px; /* W3Schools Flexbox - Flexible form fields */
+  min-width: 200px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+}
+
+/* ===== BUTTON GROUP WITH FLEXBOX ===== */
+.button-group {
+  display: flex; /* W3Schools Flexbox - Button layout */
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== VIEW PANEL CONTENT ===== */
+.no-selection {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  padding: 20px;
+}
+
+.detail-item {
+  display: flex; /* W3Schools Flexbox - Detail layout */
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #495057;
+  width: 120px;
+  flex-shrink: 0; /* W3Schools Flexbox - Prevent shrinking */
+}
+
+.detail-value {
+  color: #212529;
+  flex: 1; /* W3Schools Flexbox - Take remaining space */
+}
+
+/* ===== TABLE SECTION ===== */
+.table-section {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid #e9ecef;
+}
+
+.table-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+tbody tr.selected {
+  background-color: #e3f2fd;
+  border-left: 4px solid #4facfe;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #4facfe;
+}
+
+.error {
+  color: #dc3545;
+}
+
+.stats {
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN WITH FLEXBOX ===== */
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column; /* W3Schools Flexbox - Stack on mobile */
+  }
+
+  .search-grid {
+    flex-direction: column; /* W3Schools Flexbox - Stack form fields */
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .button-group {
+    justify-content: center; /* W3Schools Flexbox - Center buttons */
+  }
+
+  .detail-item {
+    flex-direction: column; /* W3Schools Flexbox - Stack details */
+  }
+
+  .detail-label {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px 10px;
+  }
+}
